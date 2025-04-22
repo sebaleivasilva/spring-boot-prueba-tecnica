@@ -65,7 +65,7 @@ Haz clic en “Connect” para ver las tablas y datos en memoria.
 
 Todos los endpoints (excepto crear usuario) requieren enviar el token JWT en el header Authorization:
 
-Authorization: Bearer <tu_token_jwt>
+   Authorization: Bearer <tu_token_jwt>
 
 📫 Endpoints disponibles
 
@@ -80,7 +80,7 @@ Request body:
   "correo": "juan@dominio.cl",
   "contraseña": "hunter28",
   "telefonos": [
-    {
+   {
       "numero": "1234567",
       "codigoCiudad": "1",
       "codigoPais": "57"
@@ -105,7 +105,7 @@ Descripción: Obtener un usuario por ID.
 
 Headers:
 
-Authorization: Bearer <tu_token>
+   Authorization: Bearer <tu_token>
 
 📍 PUT /usuario/actualizarUsuario/{id}
 
@@ -113,7 +113,7 @@ Descripción: Actualiza completamente al usuario.
 
 Headers:
 
-Authorization: Bearer <tu_token>
+   Authorization: Bearer <tu_token>
 
 Request body:
 
@@ -136,7 +136,7 @@ Descripción: Actualiza parcialmente los datos del usuario (uno o varios campos)
 
 Headers:
 
-Authorization: Bearer <tu_token>
+   Authorization: Bearer <tu_token>
 
 Ejemplo de request para cambiar solo el nombre:
 
@@ -150,7 +150,7 @@ Descripción: Elimina un usuario por ID.
 
 Headers:
 
-Authorization: Bearer <tu_token>
+   Authorization: Bearer <tu_token>
 
 📘 Swagger (próximamente)
 
