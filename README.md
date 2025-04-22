@@ -33,6 +33,7 @@ La API estará disponible en: http://localhost:8080
 🗃️ Base de datos (H2 en memoria)
 
 Este proyecto utiliza una base de datos H2 en memoria, por lo que no necesitas instalar nada adicional.
+
 ⚙️ Configuración
 
 Las credenciales están en el archivo src/main/resources/application.properties:
@@ -49,6 +50,7 @@ spring.h2.console.enabled=true
 Puedes conectarte a la base de datos desde el navegador con:
 
 👉 http://localhost:8080/h2-console
+
 Parámetros para ingresar:
 
     JDBC URL: jdbc:h2:mem:testdb
@@ -158,4 +160,4 @@ http://localhost:8080/swagger-ui/index.html
 
 🧪 Probar con Postman
 
-Puedes importar la colección Postman incluida en este repositorio para probar fácilmente todos los endpoints.
+Se puede importar la colección Postman incluida en este repositorio para probar fácilmente todos los endpoints.
