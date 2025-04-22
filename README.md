@@ -19,7 +19,7 @@ Este proyecto es una API RESTful construida con Spring Boot. Permite la gestión
 
 ## ▶️ Cómo ejecutar el proyecto
 
-1. Clona el repositorio:
+1. Clonar el repositorio:
    ```bash
    git clone https://github.com/sebaleivasilva/spring-boot-prueba-tecnica.git
    cd spring-boot-prueba-tecnica
@@ -32,7 +32,7 @@ La API estará disponible en: http://localhost:8080
 
 ### 🗃️ Base de datos (H2 en memoria)
 
-Este proyecto utiliza una base de datos H2 en memoria, por lo que no necesitas instalar nada adicional.
+Este proyecto utiliza una base de datos H2 en memoria, por lo que no se necesita instalar nada adicional.
 
 ### ⚙️ Configuración
 
@@ -47,7 +47,7 @@ spring.h2.console.enabled=true
 ```
 ### 🔍 Acceder a la consola web de H2
 
-Puedes conectarte a la base de datos desde el navegador con:
+Se puede conectar a la base de datos desde el navegador con:
 
 👉 http://localhost:8080/h2-console
 
