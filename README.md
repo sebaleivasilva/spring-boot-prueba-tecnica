@@ -1,4 +1,4 @@
-# 🚀 Spring Boot Prueba Técnica
+# Spring Boot Prueba Técnica
 
 Este proyecto es una API RESTful construida con Spring Boot. Permite la gestión de usuarios, incluyendo creación, obtención, actualización total y parcial, y eliminación. La autenticación se realiza mediante **JWT**.
 
@@ -34,7 +34,7 @@ La API estará disponible en: http://localhost:8080
 
 Este proyecto utiliza una base de datos H2 en memoria, por lo que no se necesita instalar nada adicional.
 
-### ⚙️ Configuración
+#### ⚙️ Configuración
 
 Las credenciales están en el archivo src/main/resources/application.properties:
 ```
@@ -89,7 +89,7 @@ Request body:
   ]
 }
 ```
-🔑 **Importante**: El campo "id" devuelto en la respuesta es el identificador único del usuario.
+🔑 **Importante**: El campo "id" es devuelto en la respuesta, es el identificador único del usuario.
 Este id se debe utilizar en los endpoints que requieren una ruta con /{id} como:
 
     GET /usuario/obtenerUsuario/{id}
@@ -99,6 +99,8 @@ Este id se debe utilizar en los endpoints que requieren una ruta con /{id} como:
     PATCH /usuario/actualizarUsuarioParcial/{id}
 
     DELETE /usuario/eliminarUsuario/{id}
+
+Además la respuesta tambien devuelve el campo "token", que se debe utilizar en los demas endopoint que requieran autenticación.
 
 ### 📍 GET /usuario/obtenerUsuario/{id}
 
