@@ -29,6 +29,7 @@ Este proyecto es una API RESTful construida con Spring Boot. Permite la gestión
     ./mvnw spring-boot:run
 
 La API estará disponible en: http://localhost:8080
+
 🗃️ Base de datos (H2 en memoria)
 
 Este proyecto utiliza una base de datos H2 en memoria, por lo que no necesitas instalar nada adicional.
