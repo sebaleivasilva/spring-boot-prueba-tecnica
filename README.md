@@ -1,5 +1,3 @@
-✅ README.md final para tu proyecto spring-boot-prueba-tecnica:
-
 # 🚀 Spring Boot Prueba Técnica
 
 Este proyecto es una API RESTful construida con Spring Boot. Permite la gestión de usuarios, incluyendo creación, obtención, actualización total y parcial, y eliminación. La autenticación se realiza mediante **JWT**.
