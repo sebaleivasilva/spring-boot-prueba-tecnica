@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "c91afb9a-a4b3-4d6f-84b5-ecce4bf8caf4",
+		"name": "Usuario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crearUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\": \"Juan Rodriguez\",\r\n\"correo\": \"juan@dominio.cl\",\r\n\"contraseña\": \"hunter28\",\r\n\"telefonos\": [\r\n        {\r\n        \"numero\": \"1234567\",\r\n        \"codigoCiudad\": \"1\",\r\n        \"codigoPais\": \"57\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/usuario/crearUsuario",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"crearUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarUsuario",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmMzg5MTQ5MC1hMDI4LTRkMDItYmVkNC02ZmJjYjMxZmJmYWUiLCJpYXQiOjE3NDUyNjQ4NzEsImV4cCI6MTc0NTI2ODQ3MX0.1OkG0clAEgVcQl_ef2rNor4QWSv38kon82kaDsPmagU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/usuario/eliminarUsuario/f3891490-a028-4d02-bed4-6fbcb31fbfae",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"eliminarUsuario",
+						"f3891490-a028-4d02-bed4-6fbcb31fbfae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerUsuario",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmMzg5MTQ5MC1hMDI4LTRkMDItYmVkNC02ZmJjYjMxZmJmYWUiLCJpYXQiOjE3NDUyNjQ4NzEsImV4cCI6MTc0NTI2ODQ3MX0.1OkG0clAEgVcQl_ef2rNor4QWSv38kon82kaDsPmagU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/usuario/obtenerUsuario/f3891490-a028-4d02-bed4-6fbcb31fbfae",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"obtenerUsuario",
+						"f3891490-a028-4d02-bed4-6fbcb31fbfae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarUsuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmMzg5MTQ5MC1hMDI4LTRkMDItYmVkNC02ZmJjYjMxZmJmYWUiLCJpYXQiOjE3NDUyNjQ4NzEsImV4cCI6MTc0NTI2ODQ3MX0.1OkG0clAEgVcQl_ef2rNor4QWSv38kon82kaDsPmagU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\": \"Jose Lopez\",\r\n\"correo\": \"juan@dominio.cl\",\r\n\"contraseña\": \"hunter28\",\r\n\"telefonos\": [\r\n        {\r\n        \"numero\": \"1234567\",\r\n        \"codigoCiudad\": \"1\",\r\n        \"codigoPais\": \"57\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/usuario/actualizarUsuario/f3891490-a028-4d02-bed4-6fbcb31fbfae",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"actualizarUsuario",
+						"f3891490-a028-4d02-bed4-6fbcb31fbfae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarUsuarioParcial",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNDVjMTdmNS0wZmZjLTRiNzMtODA2Ny0xYzUzMTRiNGQ4MzYiLCJpYXQiOjE3NDUyNjY2MDMsImV4cCI6MTc0NTI3MDIwM30.LmMZ0w14ZsR8HK506aqrcXcQ6AsGdfjhIwFm5Kzkg0U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\": \"Diego Lopez\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/usuario/actualizarUsuarioParcial/345c17f5-0ffc-4b73-8067-1c5314b4d836",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"actualizarUsuarioParcial",
+						"345c17f5-0ffc-4b73-8067-1c5314b4d836"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
