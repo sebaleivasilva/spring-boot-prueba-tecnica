@@ -30,22 +30,22 @@ Este proyecto es una API RESTful construida con Spring Boot. Permite la gestión
 
 La API estará disponible en: http://localhost:8080
 
-🗃️ Base de datos (H2 en memoria)
+### 🗃️ Base de datos (H2 en memoria)
 
 Este proyecto utiliza una base de datos H2 en memoria, por lo que no necesitas instalar nada adicional.
 
-⚙️ Configuración
+### ⚙️ Configuración
 
 Las credenciales están en el archivo src/main/resources/application.properties:
-
+```
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.driverClassName=org.h2.Driver
 spring.datasource.username=prueba
 spring.datasource.password=
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 spring.h2.console.enabled=true
-
-🔍 Acceder a la consola web de H2
+```
+### 🔍 Acceder a la consola web de H2
 
 Puedes conectarte a la base de datos desde el navegador con:
 
@@ -61,20 +61,21 @@ Parámetros para ingresar:
 
 Haz clic en “Connect” para ver las tablas y datos en memoria.
 
-🔐 Autenticación con JWT
+### 🔐 Autenticación con JWT
 
 Todos los endpoints (excepto crear usuario) requieren enviar el token JWT en el header Authorization:
-
+```
    Authorization: Bearer <tu_token_jwt>
+```
 
-📫 Endpoints disponibles
+## 📫 Endpoints disponibles
 
-📍 POST /usuario/crearUsuario
+### 📍 POST /usuario/crearUsuario
 
-Descripción: Crear un nuevo usuario. No requiere autenticación.
+**Descripción**: Crear un nuevo usuario. No requiere autenticación.
 
 Request body:
-
+```
 {
   "nombre": "Juan Rodriguez",
   "correo": "juan@dominio.cl",
@@ -87,8 +88,8 @@ Request body:
     }
   ]
 }
-
-🔑 Importante: El campo "id" devuelto en la respuesta es el identificador único del usuario.
+```
+🔑 **Importante**: El campo "id" devuelto en la respuesta es el identificador único del usuario.
 Este id se debe utilizar en los endpoints que requieren una ruta con /{id} como:
 
     GET /usuario/obtenerUsuario/{id}
@@ -99,24 +100,24 @@ Este id se debe utilizar en los endpoints que requieren una ruta con /{id} como:
 
     DELETE /usuario/eliminarUsuario/{id}
 
-📍 GET /usuario/obtenerUsuario/{id}
+### 📍 GET /usuario/obtenerUsuario/{id}
 
-Descripción: Obtener un usuario por ID.
+**Descripción**: Obtener un usuario por ID.
 
-Headers:
-
+**Headers**:
+```
    Authorization: Bearer <tu_token>
+```
+### 📍 PUT /usuario/actualizarUsuario/{id}
 
-📍 PUT /usuario/actualizarUsuario/{id}
+**Descripción**: Actualiza completamente al usuario.
 
-Descripción: Actualiza completamente al usuario.
-
-Headers:
-
+**Headers**:
+```
    Authorization: Bearer <tu_token>
-
+```
 Request body:
-
+```
 {
   "nombre": "Jose Lopez",
   "correo": "juan@dominio.cl",
@@ -129,35 +130,35 @@ Request body:
     }
   ]
 }
+```
+### 📍 PATCH /usuario/actualizarUsuarioParcial/{id}
 
-📍 PATCH /usuario/actualizarUsuarioParcial/{id}
+**Descripción**: Actualiza parcialmente los datos del usuario (uno o varios campos).
 
-Descripción: Actualiza parcialmente los datos del usuario (uno o varios campos).
-
-Headers:
-
+**Headers**:
+```
    Authorization: Bearer <tu_token>
-
+```
 Ejemplo de request para cambiar solo el nombre:
 
 {
   "nombre": "Diego Lopez"
 }
 
-📍 DELETE /usuario/eliminarUsuario/{id}
+### 📍 DELETE /usuario/eliminarUsuario/{id}
 
-Descripción: Elimina un usuario por ID.
+**Descripción**: Elimina un usuario por ID.
 
-Headers:
-
+**Headers**:
+```
    Authorization: Bearer <tu_token>
+```
+## 📘 Swagger
 
-📘 Swagger (próximamente)
-
-Una vez habilitado, podrás acceder a la documentación desde:
+Se puede acceder a la documentación desde:
 
 http://localhost:8080/swagger-ui/index.html
 
-🧪 Probar con Postman
+## 🧪 Probar con Postman
 
 Se puede importar la colección Postman incluida en este repositorio para probar fácilmente todos los endpoints.
