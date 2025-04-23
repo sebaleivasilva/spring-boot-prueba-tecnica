@@ -22,11 +22,15 @@ Este proyecto es una API RESTful construida con Spring Boot. Permite la gestión
 1. Clonar el repositorio:
    ```bash
    git clone https://github.com/sebaleivasilva/spring-boot-prueba-tecnica.git
+   ```
+2. Navegar al directorio del proyecto:
+   ```
    cd spring-boot-prueba-tecnica
-
-    Ejecuta la aplicación:
-
+   ```
+3. Ejecutar la aplicación:
+   ```
     ./mvnw spring-boot:run
+   ```
 
 La API estará disponible en: http://localhost:8080
 
@@ -155,6 +159,14 @@ Ejemplo de request para cambiar solo el nombre:
 ```
    Authorization: Bearer <tu_token>
 ```
+## Pruebas
+El proyecto incluye clases de test unitarios y de integración con JUnit y Spring Boot Test.
+Puedes ejecutarlas con:
+
+```
+   ./mvnw test
+```
+
 ## 📘 Swagger
 
 Se puede acceder a la documentación desde:
